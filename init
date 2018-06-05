@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-sudo chmod -R u+x ./*
 
 docker image pull rafaelcgstz/magento2
 
