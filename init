@@ -2,7 +2,8 @@
 
 docker image pull rafaelcgstz/magento2
 
-cp -rf docker-compose.example.yml docker-compose.yml
+#rm docker-compose.yml
+yes | cp docker-compose.example.yml docker-compose.yml
 sed -i '' -e "s/<project_name>/$1/g" docker-compose.yml
 
 if [ ! -e src/index.php ]; then

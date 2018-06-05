@@ -1,8 +1,8 @@
-version: '2'
+version: '3'
 services:
   apache:
-    image: rafaelcgstz/magento2
-    # build: .
+    # image: rafaelcgstz/magento2
+    build: .
     ports:
       - "80:80" # web
       - "9001:9000" # xdebug
@@ -13,7 +13,7 @@ services:
       - ~/.npm:/var/www/.npm
       # - ~/.nvm:/var/www/.nvm
     environment:
-      XDEBUG_CONFIG: "remote_host=localhost"
+      XDEBUG_CONFIG: "remote_host=magento2.test"
       PHP_IDE_CONFIG: "serverName=Docker"
     depends_on:
       - db
