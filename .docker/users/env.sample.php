@@ -2,7 +2,7 @@
 return array(
     'backend' =>
         array(
-            'frontName' => 'admin',
+            'frontName' => 'manager',
         ),
     'crypt' =>
         array(

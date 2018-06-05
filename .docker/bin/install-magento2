@@ -6,21 +6,21 @@ else
 fi
 chmod u+w -R ./var ./vendor ./pub/static ./pub/media ./app/etc \
 && chmod u+x ./bin/magento \
-&& php -f ./bin/magento setup:install --base-url=http://localhost/ \
+&& php -f ./bin/magento setup:install --base-url=http://magento2.test/ \
     --db-host=db \
     --db-name=magento \
     --db-user=magento \
     --db-password=magento \
     --admin-firstname=Magento \
     --admin-lastname=Commerce \
-    --admin-email=user@example.com \
+    --admin-email=admin@example.com \
     --admin-user=admin \
-    --admin-password=admin123 \
+    --admin-password=a123456 \
     --language=en_US \
     --currency=USD \
-    --timezone=America/Chicago \
+    --timezone=Europe/Moscow \
     --use-rewrites=1 \
-    --backend-frontname=admin \
+    --backend-frontname=manager \
     --use-sample-data \
 && mv ./app/etc/env.php ./app/etc/env.original.php;
 cp -rv /var/www/env.sample.php ./app/etc/env.php;
@@ -40,8 +40,8 @@ php -f ./bin/magento deploy:mode:set production \
 
       Magento 2 Installed successfully!
 
-      🌎 Admin: http://localhost/admin
+      🌎 Admin: http://magento2.test/manager
       👤 User: admin
-      🔑 Password: admin123
+      🔑 Password: a123456
 
 ===================== 🚀 Done 🚀 ==================="
