@@ -8,7 +8,6 @@ echo "
       Access your new links:
 
       🌎 Web server: http://magento2.test/
-      🌎 Admin panel: http://magento2.test/manager, User: admin, Password: a123456
       ⚙️ PHPMyAdmin: http://localhost:8080
       ✉️ Local emails: http://localhost:8025
 
